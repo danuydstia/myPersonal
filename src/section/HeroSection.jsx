@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
-// import me from "../me.JPG";
 
 const HeroSection = () => {
   const [scale, setScale] = useState(1);
@@ -23,7 +22,7 @@ const HeroSection = () => {
         {/* Hero Section */}
         <div className="flex flex-col items-center text-center">
           <motion.img
-            src="/me.JPG"
+            src={import.meta.env.BASE_URL +"/gallery/me.JPG"}
             alt="Profile"
             className="w-24 h-24 rounded-full border-2 object-cover border-gray-500"
             initial={{ opacity: -100, scale: 0.8 }}
@@ -53,7 +52,7 @@ const HeroSection = () => {
           </p>
 
           <div className="flex gap-4 mt-4 text-xl">
-            <a href="https://github.com/danuydstia" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
               <FaGithub />
             </a>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">

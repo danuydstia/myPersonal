@@ -9,7 +9,7 @@ import HeroSection from "./section/HeroSection";
 import ProjectsSection from "./section/ProjectSection";
 import Footer from "./section/Footer";
 import "./App.css";
-import icon2 from "/icon2.png";
+import icon2 from "/gallery/icon2.png";
 
 
 
