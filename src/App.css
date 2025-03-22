@@ -1,0 +1,128 @@
+/* Root Variables */
+:root {
+  --primary-color: #0f172a;  /* Warna utama (Dark Blue) */
+  --secondary-color: #1e293b; /* Warna sekunder */
+  --text-color: #ffffff; /* Warna teks */
+  --accent-color: #3b82f6; /* Warna aksen (Biru) */
+  --container-width: 1200px; /* Lebar maksimum container */
+  --border-radius: 10px;
+}
+
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 50%;
+  background: linear-gradient(to right, #4f46e5, #22d3ee);
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+/* Global Styles */
+body {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* Container Styling */
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 50px 0;
+}
+
+/* Hero Text */
+.hero-text {
+  flex: 1;
+  text-align: left;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #cbd5e1;
+}
+
+/* Hero Image */
+.hero-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-img img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .hero-img img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.particles-wrapper {
+  position: relative;
+}
+
+.wave-overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100px; /* Sesuaikan tinggi */
+  background-color: #0e0b1d; /* Warna transisi */
+  clip-path: polygon(0% 100%, 100% 100%, 100% 30%, 50% 0%, 0% 30%);
+  z-index: 10;
+}
