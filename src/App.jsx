@@ -9,6 +9,7 @@ import HeroSection from "./section/HeroSection";
 import ProjectsSection from "./section/ProjectSection";
 import Footer from "./section/Footer";
 import "./App.css";
+import icon2 from "/icon2.png";
 
 
 
@@ -40,7 +41,7 @@ function Header() {
       >
         <a href="#about-me" className="flex items-center">
           <img
-            src="/icon2.png"
+            src={icon2}
             alt="Logo"
             className="h-25 w-25 cursor-pointer hover:animate-spin"
           />
