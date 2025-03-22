@@ -1,49 +1,52 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaLink } from "react-icons/fa";
+import permit from "/permit.png";
+import project1 from "/project1.png";
+import ecommerce from "/ecommerce.png"
 
 // Data kategori dan proyek
 const projects = [
   {
     title: "Application For Permit",
     description: "A digital permit application system for submitting, tracking, and managing permits efficiently.",
-    image: "/permit.png",
+    image: {permit},
     link: "#",
   },
   {
     title: "Portfolio Website",
     description: "A personal portfolio showcasing projects and skills, built with Next.js.",
-    image: "/project1.png",
+    image: {project1},
     link: "#",
   },
   {
     title: "Task Manager App",
     description: "A simple task manager to track daily activities, built with Node.js & Express.",
-    image: "/ecommerce.png",
+    image: {ecommerce},
     link: "#",
   },
   {
     title: "E-Learning Platform",
     description: "An online platform for interactive courses and learning resources.",
-    image: "/elearning.png",
+    image: {elearning},
     link: "#",
   },
   {
     title: "Weather App",
     description: "A weather forecasting app using OpenWeather API and React.",
-    image: "/weather.png",
+    image: {weather},
     link: "#",
   },
   {
     title: "Chat Application",
     description: "A real-time chat application using WebSocket and Node.js.",
-    image: "/chat.png",
+    image: {chat},
     link: "#",
   },
   {
     title: "Finance Dashboard",
     description: "A financial management dashboard with analytics and reporting.",
-    image: "/finance.png",
+    image: {finance},
     link: "#",
   },
 ];

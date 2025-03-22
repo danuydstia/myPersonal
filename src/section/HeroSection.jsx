@@ -23,7 +23,7 @@ const HeroSection = () => {
         {/* Hero Section */}
         <div className="flex flex-col items-center text-center">
           <motion.img
-            src="/me.JPG"
+            src={me}
             alt="Profile"
             className="w-24 h-24 rounded-full border-2 object-cover border-gray-500"
             initial={{ opacity: -100, scale: 0.8 }}
