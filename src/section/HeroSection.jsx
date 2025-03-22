@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
-import me from "../../public/me.JPG";
+import me from "/me.JPG";
 
 const HeroSection = () => {
   const [scale, setScale] = useState(1);
