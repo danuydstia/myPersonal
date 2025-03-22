@@ -13,37 +13,37 @@ const projects = [
   {
     title: "Portfolio Website",
     description: "A personal portfolio showcasing projects and skills, built with Next.js.",
-    image: "/gallery/project1.png",
+    image: "./gallery/project1.png",
     link: "#",
   },
   {
     title: "Task Manager App",
     description: "A simple task manager to track daily activities, built with Node.js & Express.",
-    image: "/ecommerce.png",
+    image: "./gallery/ecommerce.png",
     link: "#",
   },
   {
     title: "E-Learning Platform",
     description: "An online platform for interactive courses and learning resources.",
-    image: "/elearning.png",
+    image: "./gallery/elearning.png",
     link: "#",
   },
   {
     title: "Weather App",
     description: "A weather forecasting app using OpenWeather API and React.",
-    image: "/weather.png",
+    image: "./gallery/weather.png",
     link: "#",
   },
   {
     title: "Chat Application",
     description: "A real-time chat application using WebSocket and Node.js.",
-    image: "/chat.png",
+    image: "./gallery/chat.png",
     link: "#",
   },
   {
     title: "Finance Dashboard",
     description: "A financial management dashboard with analytics and reporting.",
-    image: "/finance.png",
+    image: "./gallery/finance.png",
     link: "#",
   },
 ];
