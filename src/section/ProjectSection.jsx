@@ -22,30 +22,6 @@ const projects = [
     image: "./gallery/ecommerce.png",
     link: "#",
   },
-  {
-    title: "E-Learning Platform",
-    description: "An online platform for interactive courses and learning resources.",
-    image: "./gallery/elearning.png",
-    link: "#",
-  },
-  {
-    title: "Weather App",
-    description: "A weather forecasting app using OpenWeather API and React.",
-    image: "./gallery/weather.png",
-    link: "#",
-  },
-  {
-    title: "Chat Application",
-    description: "A real-time chat application using WebSocket and Node.js.",
-    image: "./gallery/chat.png",
-    link: "#",
-  },
-  {
-    title: "Finance Dashboard",
-    description: "A financial management dashboard with analytics and reporting.",
-    image: "./gallery/finance.png",
-    link: "#",
-  },
 ];
 
 const categories = ["All Projects", "HTML & CSS", "JavaScript", "React & Vite"];
