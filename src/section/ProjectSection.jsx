@@ -13,13 +13,13 @@ const projects = [
   {
     title: "Portfolio Website",
     description: "A personal portfolio showcasing projects and skills, built with Next.js.",
-    image: `${import.meta.env.BASE_URL}gallery/project1.png`,
+    image: `./gallery/project1.png`,
     link: "#",
   },
   {
     title: "Task Manager App",
     description: "A simple task manager to track daily activities, built with Node.js & Express.",
-    image: `${import.meta.env.BASE_URL}gallery/ecommerce.png`,
+    image: `./gallery/ecommerce.png`,
     link: "#",
   },
 ];
@@ -31,16 +31,10 @@ const ProjectsSection = () => {
   const [selectedCategory, setSelectedCategory] = useState("All Projects");
   const [currentPage, setCurrentPage] = useState(1);
   const projectsPerPage = 6;
-
-  // Filter projects berdasarkan kategori
   const filteredProjects = projects.filter(
     (project) => selectedCategory === "All Projects" || project.category === selectedCategory
   );
-
-  // Hitung total halaman
   const totalPages = Math.ceil(filteredProjects.length / projectsPerPage);
-
-  // Ambil data proyek yang sesuai dengan halaman saat ini
   const startIndex = (currentPage - 1) * projectsPerPage;
   const displayedProjects = filteredProjects.slice(startIndex, startIndex + projectsPerPage);
 
@@ -69,9 +63,6 @@ const ProjectsSection = () => {
             ))}
           </div>
         </div>
-
-
-
         {/* Projects Grid */}
         <div className="w-3/4 ">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
