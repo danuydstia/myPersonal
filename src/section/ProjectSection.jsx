@@ -7,22 +7,23 @@ const projects = [
   {
     title: "Application For Permit",
     description: "A digital permit application system for submitting, tracking, and managing permits efficiently.",
-    image: "./gallery/permit.png",
+    image: `${import.meta.env.BASE_URL}gallery/permit.png`, // Gunakan BASE_URL
     link: "#",
   },
   {
     title: "Portfolio Website",
     description: "A personal portfolio showcasing projects and skills, built with Next.js.",
-    image: "./gallery/project1.png",
+    image: `${import.meta.env.BASE_URL}gallery/project1.png`,
     link: "#",
   },
   {
     title: "Task Manager App",
     description: "A simple task manager to track daily activities, built with Node.js & Express.",
-    image: "./gallery/ecommerce.png",
+    image: `${import.meta.env.BASE_URL}gallery/ecommerce.png`,
     link: "#",
   },
 ];
+
 
 const categories = ["All Projects", "HTML & CSS", "JavaScript", "React & Vite"];
 
@@ -45,22 +46,23 @@ const ProjectsSection = () => {
 
   return (
     <section id="project" className="py-30 bg-gray-900 border-t-1 border-blue-950 text-white">
-      <div className="container mx-auto px-6 flex gap-x-8">
-        {/* Sidebar Menu */}
-        <div className="w-fit px-4 py-2 rounded-lg text-left">
-          <div className="flex flex-col gap-4">
+      <div className="container mx-auto px-6 flex flex-col md:flex-row md:gap-x-8 items-center md:items-start">
+        {/* Sidebar Menu */}  
+
+        <div className="w-full sm:w-fit px-4 py-2 rounded-lg text-center sm:text-left">
+          <div className="flex sm:flex-col flex-wrap justify-center item sm:justify-start gap-1 mb-4 sm:gap-4">
             {categories.map((category, index) => (
               <button
                 key={index}
                 onClick={() => {
                   setSelectedCategory(category);
-                  setCurrentPage(1); // Reset ke halaman pertama saat ganti kategori
+                  setCurrentPage(1);
                 }}
-                className={`px-4 py-2 border bg-clip-border rounded-lg text-left ${
+                className={`px-6 py-2 border bg-clip-border rounded-lg transition text-sm sm:text-base ${
                   selectedCategory === category
-                    ? "bg-gradient-to-r from-blue-500/10 to-purple-500/10 hover:from-blue-600/10 hover:to-purple-600/50 border-0"
-                    : "bg-gradient-to-r from-blue-500/10 to-purple-500/10 hover:from-blue-600/10 hover:to-purple-600/50 border-0"
-                } transition`}
+                    ? "bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-white border-blue-500 shadow-lg"
+                    : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+                }`}
               >
                 {category}
               </button>
@@ -68,9 +70,11 @@ const ProjectsSection = () => {
           </div>
         </div>
 
+
+
         {/* Projects Grid */}
-        <div className="w-3/4">
-          <div className="grid md:grid-cols-3 gap-8">
+        <div className="w-3/4 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
             {displayedProjects.map((project, index) => (
               <motion.div
                 key={index}
@@ -97,7 +101,7 @@ const ProjectsSection = () => {
           </div>
 
           {/* Pagination Controls */}
-          <div className="flex justify-center items-center mt-8 space-x-2">
+          <div className="flex justify-center items-center mt-8 space-x-2 overflow-auto">
             <button
               onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
               disabled={currentPage === 1}

@@ -39,23 +39,28 @@ const HeroSection = () => {
             className="text-3xl md:text-5xl font-bold mt-4"
             style={{ transform: `scale(${scale})`, transition: "transform 0.2s" }}
           >
-            Software Developer, Freelancer,
+            Web Developer, Freelancer,
             <br /> and Tech Enthusiast.
           </h1>
           </motion.div>
-          <p
-            className="text-gray-400 mt-4 max-w-md"
-            style={{ transform: `scale(${scale})`, transition: "transform 0.2s" }}
+          <motion.div
+          initial={{opacity:0 ,y:20}}
+          whileInView={{opacity:1,y:0}}
+          animate={{opacity:1, y:0}}
+          transition={{duration:0.3, ease:"easeOut"}}
+          >
+          <p className="text-gray-400 mt-4 max-w-md"
+          style={{ transform: `scale(${scale})`, transition: "transform 0.2s"  }}
           >
             Hi, I’m Danu, a passionate software engineer focused on building
             scalable applications and exploring the latest technologies.
           </p>
-
+          </motion.div>
           <div className="flex gap-4 mt-4 text-xl">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/danuydstia" target="_blank" rel="noopener noreferrer">
               <FaGithub />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://instagram.com/danuydstia" target="_blank" rel="noopener noreferrer">
               <FaInstagram />
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
