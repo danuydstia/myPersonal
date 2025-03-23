@@ -7,7 +7,7 @@ const projects = [
   {
     title: "Application For Permit",
     description: "A digital permit application system for submitting, tracking, and managing permits efficiently.",
-    image: `./gallery/permit.png`, // Gunakan BASE_URL
+    image: `./gallery/permit.png`,
     link: "#",
   },
   {
