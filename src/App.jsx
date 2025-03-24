@@ -80,7 +80,7 @@ const Header = () => {
             Education
           </Link>
           <Link
-            to="Skill"
+            to="skill"
             smooth={true}
             duration={800}
             offset={-50}
