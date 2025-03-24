@@ -8,9 +8,11 @@ import { TypeAnimation } from "react-type-animation";
 import HeroSection from "./section/HeroSection";
 import ProjectsSection from "./section/ProjectSection";
 import Footer from "./section/Footer";
+import Skill from "./section/Skillset";
 import "./App.css";
 import icon2 from "/gallery/icon2.png";
 import EducationTimeline from "./section/Pendidikan";
+import Skillset from "./section/Skillset";
 
 
 
@@ -56,7 +58,7 @@ const Header = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           className={`hidden md:flex absolute top-2 left-1/2 transform -translate-x-1/2 
-            w-[350px] items-center justify-between bg-gradient-to-r from-blue-500/10 to-purple-500/10 px-6 py-2 rounded-full text-gray-200 
+            w-[600px] items-center justify-between bg-gradient-to-r from-blue-500/10 to-purple-500/10 px-6 py-2 rounded-full text-gray-200 
             ${scrolling ? "h-[40px]" : "h-[45px]"}`}
         >
           <Link
@@ -67,6 +69,24 @@ const Header = () => {
             className="nav-link bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent cursor-pointer"
           >
             Home
+          </Link>
+          <Link
+            to="education"
+            smooth={true}
+            duration={800}
+            offset={-50}
+            className="nav-link bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent cursor-pointer"
+          >
+            Education
+          </Link>
+          <Link
+            to="Skill"
+            smooth={true}
+            duration={800}
+            offset={-50}
+            className="nav-link bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent cursor-pointer"
+          >
+            Skill
           </Link>
           <Link
             to="project"
@@ -118,6 +138,16 @@ const Header = () => {
             Home
           </Link>
           <Link
+            to="education"
+            smooth={true}
+            duration={800}
+            offset={-50}
+            className="text-2xl cursor-pointer"
+            onClick={() => setMenuOpen(false)}
+          >
+            Education
+          </Link>
+          <Link
             to="project"
             smooth={true}
             duration={800}
@@ -158,6 +188,7 @@ function App() {
       <Header />
       <HeroSection />
       <EducationTimeline />
+      <Skillset />
       <ProjectsSection />
       <Footer />
     </>

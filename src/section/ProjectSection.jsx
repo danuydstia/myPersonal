@@ -8,24 +8,13 @@ const projects = [
     title: "Application For Permit",
     description: "A digital permit application system for submitting, tracking, and managing permits efficiently.",
     image: `./gallery/permit.png`,
-    link: "#",
-  },
-  {
-    title: "Portfolio Website",
-    description: "A personal portfolio showcasing projects and skills, built with Next.js.",
-    image: `./gallery/project1.png`,
-    link: "#",
-  },
-  {
-    title: "Task Manager App",
-    description: "A simple task manager to track daily activities, built with Node.js & Express.",
-    image: `./gallery/ecommerce.png`,
-    link: "#",
+    link: "https://github.com/danuydstia/pengajuanIzin",
+    category:"PHP"
   },
 ];
 
 
-const categories = ["All Projects", "HTML & CSS", "JavaScript", "React & Vite"];
+const categories = ["All Projects", "PHP", "React & Vite"];
 
 const ProjectsSection = () => {
   const [selectedCategory, setSelectedCategory] = useState("All Projects");
@@ -39,7 +28,7 @@ const ProjectsSection = () => {
   const displayedProjects = filteredProjects.slice(startIndex, startIndex + projectsPerPage);
 
   return (
-    <section id="project" className="py-30 bg-gray-900 border-t-1 border-blue-950 text-white">
+    <section id="project" className="py-30 bg-gray-900 border-t-1  border-blue-950 text-white">
       <div className="container mx-auto px-6 flex flex-col md:flex-row md:gap-x-8 items-center md:items-start">
         {/* Sidebar Menu */}  
 
@@ -80,9 +69,10 @@ const ProjectsSection = () => {
                 <h3 className="text-xl font-semibold text-white mt-4">{project.title}</h3>
                 <p className="text-white/80 text-sm mt-2">{project.description}</p>
                 <div className="flex items-center mt-4">
-                  <a href="#" className="mr-3 text-white hover:text-blue-300 transition">
-                    <FaGithub />
-                  </a>
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="mr-3 text-white hover:text-blue-300 transition">
+                  <FaGithub />
+                </a>
+
                   <a href="#" className="text-white hover:text-blue-300 transition">
                     <FaLink />
                   </a>
