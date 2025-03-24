@@ -66,7 +66,7 @@ const HeroSection = () => {
           <a href="https://instagram.com/danuydstia" target="_blank" rel="noopener noreferrer">
             <FaInstagram />
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/danu-yudistia-3a93352a9/" target="_blank" rel="noopener noreferrer">
             <FaLinkedin />
           </a>
         </div>
