@@ -39,7 +39,7 @@ const HeroSection = () => {
             className="text-3xl md:text-5xl font-bold mt-4"
             style={{ transform: `scale(${scale})`, transition: "transform 0.2s" }}
           >
-            Web Developer, Freelancer,
+            Web Developer
             <br /> and Tech Enthusiast.
           </h1>
         </motion.div>
